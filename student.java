@@ -26,8 +26,8 @@ public class student
 	System.out.println("name\t\trollno\tcollege\t\tdepartment\tpercentage");
 	student stud1=new student();
 	student stud2=new student();
-	stud1.setstudent("manasa",165,"CS",88);
-	stud2.setstudent("inchara",100,"EC",90);
+	stud1.setstudent("nadashree",165,"CS",88);
+	stud2.setstudent("manasa",120,"EC",90);
 	stud1.getstudent();
 	stud2.getstudent();
 	}
