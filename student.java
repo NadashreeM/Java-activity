@@ -1,34 +1,69 @@
-package week2;
+package par;
 
 public class student 
 {
-	String studname;
-	String dept;
-	int rollno;
-	static String college="GPT";
-	int percentage;
-	void setstudent(String name , int rno , String cdept , int per)
-	{
-	studname=name;
-	rollno = rno;
-	dept=cdept;
-	percentage = per;
-	}
-	void getstudent()
-	{
-	System.out.println(studname+"\t\t"+rollno+"\t"+college+"\t\t"+dept+"\t\t"+percentage);
-	}
-	}
-	class stud
-	{
-	public static void main(String args[])
-	{
-	System.out.println("name\t\trollno\tcollege\t\tdepartment\tpercentage");
-	student stud1=new student();
-	student stud2=new student();
-	stud1.setstudent("nadashree",165,"CS",88);
-	stud2.setstudent("manasa",120,"EC",90);
-	stud1.getstudent();
-	stud2.getstudent();
-	}
+	String name;
+    private int id;
+    private double GPA;
+
+    // Default Constructor
+    public student() {
+        // Default values
+        this.name = "Unknown";
+        this.id = 0;
+        this.GPA = 0.0;
+    }
+
+    // Parameterized Constructor
+    public student(String name, int id, double GPA) {
+        this.name = name;
+        this.id = id;
+        this.GPA = GPA;
+    }
+
+    // Method to display student information
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("ID: " + id);
+        System.out.println("GPA: " + GPA);
+    }
+
+    // Getters and setters for attributes
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public double getGPA() {
+        return GPA;
+    }
+
+    public void setGPA(double GPA) {
+        this.GPA = GPA;
+    }
+
+    public static void main(String[] args) {
+        // Creating an instance of Student using default constructor
+        student student1 = new student();
+
+        // Accessing and modifying attributes
+        student1.setName("John Doe");
+        student1.setId(12345);
+        student1.setGPA(3.8);
+
+        // Displaying student information
+        student1.displayInfo();
+    }
 }
+
