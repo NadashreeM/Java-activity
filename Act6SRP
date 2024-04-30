@@ -1,0 +1,108 @@
+Import java.util.Scanner;
+
+Class Student {
+
+    Private String name;
+
+    Private int[] marks;
+
+    Public Student(String name, int[] marks) {
+
+        This.name = name;
+
+        This.marks = marks;
+
+    }
+
+    Public String getName() {
+
+        Return name;
+
+    }
+
+    Public int[] getMarks() {
+
+        Return marks;
+
+    }
+
+}
+
+Class GradeCalculator {
+
+    Public static char calculateGrade(int[] marks) {
+
+        Int totalMarks = 0;
+
+        For (int mark : marks) {
+
+            totalMarks += mark;
+
+        }
+
+        Int averageMarks = totalMarks / marks.length;
+
+        If (averageMarks >= 90) {
+
+            Return ‘A’;
+
+        } else if (averageMarks >= 80) {
+
+            Return ‘B’;
+
+        } else if (averageMarks >= 70) {
+
+            Return ‘C’;
+
+        } else if (averageMarks >= 60) {
+
+            Return ‘D’;
+
+        } else {
+
+            Return ‘F’;
+
+        }
+
+    }
+
+}
+
+Public class Main {
+
+    Public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);        
+
+        System.out.print(“Enter student name: “);
+
+        String name = scanner.nextLine();
+
+        System.out.print(“Enter number of internals: “);
+
+        Int numInternals = scanner.nextInt();
+
+        Int[] marks = new int[numInternals];
+
+        System.out.println(“Enter marks for each internal:”);
+
+        For (int I = 0; I < numInternals; i++) {
+
+            System.out.print(“Internal “ + (I + 1) + “: “);
+
+            Marks[i] = scanner.nextInt();
+
+        }        
+
+        Student student = new Student(name, marks);        
+
+        Char grade = GradeCalculator.calculateGrade(student.getMarks());
+
+        System.out.println(“Grade for “ + student.getName() + “: “ + grade);
+
+        Scanner.close();
+
+    }
+
+}
+
